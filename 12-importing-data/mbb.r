@@ -24,6 +24,8 @@ theme_set(theme_minimal() +
     axis.title.x = element_text(margin = margin(t = 20, r = 0, b = 20, l = 0))
   ))
 
+mbb <- import("./12-importing-data/mbb.csv")
+
 p <- ggplot(mbb, aes(x = as.yearmon(Month))) +
   geom_line(aes(y = Beethoven, color = "darkred")) +
   geom_line(aes(y = Bach, color = "steelblue")) +
